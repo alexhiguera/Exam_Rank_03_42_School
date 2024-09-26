@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:13:36 by alex              #+#    #+#             */
-/*   Updated: 2024/09/17 18:01:59 by alex             ###   ########.fr       */
+/*   Updated: 2024/09/24 17:13:15 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	put_str(char *str, int *r)
 		len++;
 	write_xd(str, len, r);
 }
+
 void	put_nbr(int n, int *r)
 {
 	if (n < 0)
@@ -87,9 +88,9 @@ void	write_format(char *str, size_t *i, int *r, va_list args)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list args;
+	va_list	args;
 	size_t	i;
-	int	r;
+	int		r;
 
 	va_start(args, str);
 	i = 0;
