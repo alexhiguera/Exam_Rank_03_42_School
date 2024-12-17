@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 17:09:51 by alex              #+#    #+#             */
-/*   Updated: 2024/11/30 18:11:49 by alex             ###   ########.fr       */
+/*   Updated: 2024/11/30 17:56:37 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int ft_printf(const char *format, ... )
 	va_start(ptr, format);
 	while (*format)
 	{
-		if ((*format == '%') && (*(format + 1) == 's' || \
-			*(format + 1) == 'd' || *(format + 1) == 'x'))
+		if ((*format == '%') && (((*(format + 1) == 's') \
+			|| (*(format + 1) == 'd') || (*(format + 1) == 'x'))
 		{
 			format++;
 			if (*format == 's')
